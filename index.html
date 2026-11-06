@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gyshela Gustiar – Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖥️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="menubar">
+  <span style="font-size:16px"></span><b>Portfolio</b>
+  <span class="hide-sm">File</span><span class="hide-sm">Edit</span><span class="hide-sm">View</span><span class="hide-sm">Window</span>
+  <div class="sp"></div>
+  <span id="theme" role="button" tabindex="0" aria-label="Appearance" title="Appearance">◐</span>
+  <span id="clock"></span>
+</div>
+
+<div id="notch" tabindex="0" role="group" aria-label="Notch widgets">
+  <div class="n-idle"><span>♪</span><i></i></div>
+  <div class="n-panel">
+    <div class="n-card"><div class="n-cover">♪<img src="images/song.jpg" alt="Cover lagu" onerror="this.remove()"></div><div class="n-meta"><b data-song>Your Song Title</b><span data-artist>Artist Name</span></div><button class="n-play" data-ctl="play" data-size="16" aria-label="Play"></button></div>
+    <div class="n-row">
+      <div class="n-card n-time"><div id="nt">--.--</div><small id="nd"></small><small id="nb" hidden></small></div>
+      <div class="n-card n-acts"><button data-t="light">Light</button><button data-t="dark">Dark</button><button data-t="glass">Glass</button><button data-open="projects">Projects</button><button data-open="contact">Contact</button></div>
+    </div>
+  </div>
+</div>
+
+<div id="pop" role="menu"><button data-t="auto">Auto (system)</button><button data-t="light">Light</button><button data-t="dark">Dark</button><button data-t="glass">Liquid Glass</button></div>
+
+<div id="desk">
+  <section class="win" id="about" style="left:max(16px,calc(50% - 600px));top:80px;width:720px;height:480px">
+    <div class="title"><button class="dot r" data-close aria-label="Close"></button><button class="dot y" aria-label="Minimize" data-close></button><button class="dot g" aria-label="Zoom" data-zoom></button><h2>About Me</h2></div>
+    <div class="body"><div class="pad">
+      <div class="hero"><div class="avatar">G<img src="images/profile.jpg" alt="Foto Gyshela Gustiar" onerror="this.remove()"></div><div><h1>Hi! I'm Gyshela Gustiar</h1><div class="role">Grade 12 student · Jakarta, Indonesia</div></div></div>
+      <p>Welcome to my personal corner of the internet! I'm a high-school student from Jakarta who loves coding, electronics, and building random cool projects. This website is a collection of things I've built, experiments I've tried, and lessons I've picked up along my journey.</p>
+      <p>Open the apps in the dock below to see my projects, skills, and how to reach me.</p>
+      <div class="chips"><span class="chip">C++</span><span class="chip">Node.js</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Electronics</span></div>
+      <div class="btns"><button class="btn p" data-open="projects">View projects</button><button class="btn" data-open="contact">Get in touch</button></div>
+    </div></div>
+  </section>
+
+  <section class="win" id="music" style="left:max(24px,calc(50% + 150px));top:80px;width:330px;height:560px">
+    <div class="title"><button class="dot r" data-close aria-label="Close"></button><button class="dot y" data-close aria-label="Minimize"></button><button class="dot g" data-zoom aria-label="Zoom"></button><h2>Music</h2></div>
+    <div class="body"><div class="pad" style="padding:20px 24px 24px">
+      <div class="cover">♪<img src="images/song.jpg" alt="Cover lagu" onerror="this.remove()"></div>
+      <div class="mt" data-song>Hanya Untuk-Mu</div><div class="ma" data-artist>ten2five</div>
+      <div class="bar" id="mbar" role="slider" aria-label="Seek" tabindex="0"><i></i></div><div class="times"><span id="mcur">0:00</span><span id="mdur">0:00</span></div>
+      <div class="ctl">
+        <button data-ctl="prev" aria-label="Restart song"></button>
+        <button data-ctl="play" data-size="46" aria-label="Play"></button>
+        <button data-ctl="next" aria-label="Forward 10 seconds"></button>
+      </div>
+      <p style="font-size:12px;text-align:center;margin:16px auto 0;color:rgba(255,255,255,.78)">Song preview. <a data-music href="https://music.apple.com/gb/song/hanya-untuk-mu/1566651489" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Listen more in Apple Music</a></p>
+    </div></div>
+  </section>
+
+  <section class="win" id="projects" style="left:max(24px,calc(50% - 300px));top:110px;width:600px;height:440px">
+    <div class="title"><button class="dot r" data-close aria-label="Close"></button><button class="dot y" data-close aria-label="Minimize"></button><button class="dot g" data-zoom aria-label="Zoom"></button><h2>Projects</h2></div>
+    <div class="body"><div class="pad">
+      <div class="proj"><div class="thumb" style="background:linear-gradient(135deg,#ff9a44,#ff5f6d)">🛒<img src="images/project1.jpg" alt="Konversi Termometer-X" onerror="this.remove()"></div><div><h3><a href="https://monisukateazzi.github.io/Konversi-Termometer-X/" target="_blank" rel="noopener">KONVERSI TERMOMETER-X</a></h3><p>I started Termometer X as a school project that involved doing thermometer calculations, which I found really boring and hard to do by hand. Of doing them over and over I made a website that does the calculations and temperature conversions for me. This project taught me how to turn math formulas into code and make a tool that solves a problem I had.</p></div></div>
+      <div class="proj"><div class="thumb" style="background:linear-gradient(135deg,#43e97b,#0a9d8f)">📊<img src="images/project2.jpg" alt="SISTECH-MART" onerror="this.remove()"></div><div><h3><a href="https://sistech-market-01.vercel.app/" target="_blank" rel="noopener">SISTECH-MART</a></h3><p>A responsive e-commerce web application built as my capstone project for the SISTECH Front-End Engineering mentorship program by RISTEK Fasilkom UI. Focused on clean UI/UX, dynamic product browsing, and smooth cart interactions.</p></div></div>
+      <div class="proj"><div class="thumb" style="background:linear-gradient(135deg,#6b8cff,#9b5cff)">🎮<img src="images/project3.jpg" alt="CATIFY" onerror="this.remove()"></div><div><h3><a href="https://www.tampermonkey.net/script_installation.php#url=https://github.com/monisukateazzi/CAT-IFY/raw/refs/heads/main/catify.user.js" target="_blank" rel="noopener">CATIFY</a></h3><p>Tired of boring web pages? CAT-IFY is a lightweight browser userscript powered by Tampermonkey that hijacks webpage images and transforms them into cute cat pictures on the fly, even on dynamically loaded sites.</p></div></div>
+      <a class="more" href="https://github.com/monisukateazzi" target="_blank" rel="noopener">Click here to see others</a>
+    </div></div>
+  </section>
+
+  <section class="win" id="resume" style="left:max(24px,calc(50% - 250px));top:90px;width:520px;height:420px">
+    <div class="title"><button class="dot r" data-close aria-label="Close"></button><button class="dot y" data-close aria-label="Minimize"></button><button class="dot g" data-zoom aria-label="Zoom"></button><h2>Skills</h2></div>
+    <div class="body"><div class="pad">
+      <div class="row"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2l1.7 18.5L12 23l7.3-2.5L21 2z" fill="#e34f26"/><path d="M12 4.2v16.6l5.8-2 1.4-14.6z" fill="#ef652a"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#fff">5</text></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2l1.7 18.5L12 23l7.3-2.5L21 2z" fill="#1572b6"/><path d="M12 4.2v16.6l5.8-2 1.4-14.6z" fill="#33a9dc"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#fff">3</text></svg>HTML / CSS</span><span>Intermediate</span></div><div class="row"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="3" fill="#f7df1e"/><text x="21" y="20" text-anchor="end" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#1d1d1f">JS</text></svg>JavaScript</span><span>Intermediate</span></div><div class="row"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2" width="12.5" height="11" rx="4.5" fill="#3776ab"/><rect x="9" y="11" width="12.5" height="11" rx="4.5" fill="#ffd43b"/><circle cx="6.8" cy="6" r="1.2" fill="#fff"/><circle cx="17.2" cy="18" r="1.2" fill="#3776ab"/></svg>Python</span><span>Intermediate</span></div>
+      <div class="row"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,1.5 21,6.75 21,17.25 12,22.5 3,17.25 3,6.75" fill="#00599c"/><text x="12" y="15" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#fff">C++</text></svg>C++</span><span>Advanced</span></div>
+      <div class="row"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,1.5 21,6.75 21,17.25 12,22.5 3,17.25 3,6.75" fill="#339933"/><text x="12" y="15" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#fff">JS</text></svg>Node.js</span><span>Advanced</span></div>
+    </div></div>
+  </section>
+
+  <section class="win" id="contact" style="left:max(24px,calc(50% - 210px));top:120px;width:420px;height:380px">
+    <div class="title"><button class="dot r" data-close aria-label="Close"></button><button class="dot y" data-close aria-label="Minimize"></button><button class="dot g" data-zoom aria-label="Zoom"></button><h2>Contact</h2></div>
+    <div class="body"><div class="pad">
+      <a class="link" href="mailto:gyshelagustiar@gmail.com"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0a7aff"/><rect x="5" y="7" width="14" height="10" rx="2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M5.8 8.6L12 13l6.2-4.4" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>gyshelagustiar@gmail.com</a>
+      <a class="link" href="https://github.com/monisukateazzi" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>@monisukateazzi</a>
+      <a class="link" href="https://www.linkedin.com/in/gyshela-grimonia-gustiar-065404302/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0a66c2"/><circle cx="7.5" cy="7.6" r="1.5" fill="#fff"/><rect x="6.2" y="10.2" width="2.6" height="7.4" fill="#fff"/><path d="M11 10.2h2.4v1.1c.5-.8 1.4-1.3 2.5-1.3 2 0 2.7 1.3 2.7 3.2v4.4h-2.5v-3.9c0-1-.3-1.6-1.2-1.6-1 0-1.5.7-1.5 1.7v3.8H11z" fill="#fff"/></svg>LinkedIn</a>
+      <a class="link" href="https://instagram.com/gvshela" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".65" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15.7" cy="8.3" r="1" fill="#fff"/></svg>Instagram</a>
+    </div></div>
+  </section>
+</div>
+
+<div id="dockwrap"><nav id="dock" aria-label="Apps">
+  <button class="dk" data-open="about" title="About" style="background:linear-gradient(135deg,#5ac8fa,#0a7aff)">🙂</button>
+  <button class="dk" data-open="projects" title="Projects" style="background:linear-gradient(135deg,#ffb347,#ff5f6d)">📁</button>
+  <button class="dk" data-open="resume" title="Skills" style="background:linear-gradient(135deg,#6b8cff,#9b5cff)">📄</button>
+  <button class="dk" data-open="contact" title="Contact" style="background:linear-gradient(135deg,#43e97b,#0a9d8f)">✉️</button>
+<button class="dk" data-open="music" title="Music" style="background:linear-gradient(135deg,#ff6b88,#ff2d55)">♫</button>
+</nav></div>
+
+<script src="script.js"></script>
+</body>
+</html>
